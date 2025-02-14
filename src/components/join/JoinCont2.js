@@ -63,7 +63,7 @@ const JoinCont2 = () => {
         }
 
         try {
-            const response = await fetch(`${bkURL}/join/idChk/${id}`);
+            const response = await fetch(`${bkURL}join/idChk/${id}`);
             const data = await response.json();
 
             if (data.cnt === 0) {
