@@ -5,7 +5,6 @@ const bkURL = process.env.REACT_APP_BACK_URL;
 
 const MyPwChkCont = ({user,pwChkSet}) => {
 
-
     const myPwChkGo = () => {
         const frmData = new FormData(document.myPwChkFrm);
         const data = Object.fromEntries(frmData); // { id: '...', pw: '...' }

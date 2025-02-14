@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 const bkURL = process.env.REACT_APP_BACK_URL;
 
-
 function LoginCallback(props) {
         // window.location.href = `${bkURL}/naverLogin`// 네이버 로그인 백엔드 URL로 리디렉션
         const [userData, setUserData] = useState(null);

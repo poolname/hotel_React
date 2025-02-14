@@ -5,7 +5,6 @@ import '../../scss/myinfo.scss'
 
 const bkURL = process.env.REACT_APP_BACK_URL;
 
-
 var idPubChk = false
 
 const JoinCont2 = () => {

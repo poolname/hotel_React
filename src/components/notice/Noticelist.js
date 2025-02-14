@@ -6,6 +6,8 @@ import Noticesearch from "./Noticesearch";
 import Pagination from "../sub/Pagination";
 // import { useParams } from "react-router-dom";
 
+const bkURL = process.env.REACT_APP_BACK_URL;
+
 const Noticelist = () => {
     const [Noticelists, setNoticelists] = useState([]);
     const [Ntype, setNtype] = useState("all");
@@ -31,7 +33,7 @@ const Noticelist = () => {
     //공지사항 전체
     const fetchData = async () => {
         try {
-            const res = await axios.get("http://localhost:5002/bk/notice");
+            const res = await axios.get(bkURL + "/notice");
             console.log("전체데이터", res.data);
             setNoticelists(res.data);
         } catch (err) {
@@ -49,9 +51,9 @@ const Noticelist = () => {
     // const handleview = async id => {
     //     console.log("제목클릭");
     //     try {
-    //         // const res = axios.put(`http://localhost:5002/bk/notice/${id}`);
+    //         // const res = axios.put(`${bkURL}/notice/${id}`);
     //         //console.log("조회수증가 성공");
-    //         // navigate(`http://localhost:5002/bk/notice/detail/${id}`);
+    //         // navigate(`${bkURL}/notice/detail/${id}`);
     //     } catch (error) {
     //         console.error("갔다옴실패", error);
     //     }
@@ -78,7 +80,7 @@ const Noticelist = () => {
         try {
             console.log("폼데이터", myData);
             const res = await axios.put(
-                "http://localhost:5002/bk/notice",
+                bkURL + "/notice",
                 myData
             );
             console.log("필터데이터", res.data);

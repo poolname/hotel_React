@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+const bkURL = process.env.REACT_APP_BACK_URL;
+
 const JoinPhone = ({ valid, setValid, setPhone }) => {
     const [startNum, setStartNum] = useState(''); // 시작 번호
     const [middleNum, setMiddleNum] = useState(''); // 중간 번호
@@ -10,8 +12,6 @@ const JoinPhone = ({ valid, setValid, setPhone }) => {
     const [isPhoneChk, setPhoneChk] = useState(false);
     const [isReadOnly, setIsReadOnly] = useState(false);
     const [randomNum, setRandomNum] = useState('');
-
-    const bkURL = process.env.REACT_APP_BACK_URL;
 
     // 본인인증번호 발송
     const handlePhoneChk = () => {

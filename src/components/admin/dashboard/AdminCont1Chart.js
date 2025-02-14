@@ -49,6 +49,8 @@ const options = {
   },
 };
 
+const bkURL = process.env.REACT_APP_BACK_URL;
+
 
 // chart1
 const AdminCont1Chart = () => {
@@ -60,7 +62,7 @@ const AdminCont1Chart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5002/bk/admin/dashboard/person')
+        const response = await axios.get(bkURL + '/admin/dashboard/person')
         const labels =  response.data.map((item) => item.dateCalc)
         const personCnt = response.data.map((item) => item.personCnt)
 

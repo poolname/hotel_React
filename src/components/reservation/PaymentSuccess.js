@@ -5,6 +5,8 @@ import axios from "axios";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
 
+const bkURL = process.env.REACT_APP_BACK_URL;
+
 const PaymentSuccess = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -97,7 +99,7 @@ const PaymentSuccess = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5002/bk/reserve/save",
+        bkURL + "/reserve/save",
         reservationData
       );
 
@@ -142,7 +144,7 @@ const PaymentSuccess = () => {
 
     try {
       const paymentResponse = await axios.post(
-        "http://localhost:5002/bk/reserve/savepayment",
+        bkURL + "/reserve/savepayment",
         paymentData
       );
       // if (paymentResponse.status === 201) {

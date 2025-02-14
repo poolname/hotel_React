@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import AdminCont5_Modify_require from "./AdminCont5_Modify_require";
 import AdminCont5_Modify_btn from "./AdminCont5_Modify_btn";
 
+const bkURL = process.env.REACT_APP_BACK_URL;
+
 const AdminCont5_Modify = () => {
     const [category, setcategory] = useState({});
     const [modify, setmodify] = useState({});
@@ -20,7 +22,7 @@ const AdminCont5_Modify = () => {
         const fetchData = async () => {
             try {
                 const res = await axios.get(
-                    `http://localhost:5002/bk/notice/detail/${id}`
+                    `${bkURL}/notice/detail/${id}`
                 );
                 console.log("갔다옴", res.data);
                 setmodify(res.data);
@@ -42,7 +44,7 @@ const AdminCont5_Modify = () => {
         console.log("수정데이터확인용", mydata);
         try {
             const res = await axios.put(
-                `http://localhost:5002/bk/notice/modify/${id}`,
+                `${bkURL}/notice/modify/${id}`,
                 mydata,
                 {
                     headers: {

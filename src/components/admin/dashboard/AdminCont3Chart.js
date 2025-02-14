@@ -48,6 +48,8 @@ const options = {
   },
 };
 
+const bkURL = process.env.REACT_APP_BACK_URL;
+
 const AdminCont3Chart = () => {
   const [chartData, setChartData] = useState({
     labels: [],
@@ -57,7 +59,7 @@ const AdminCont3Chart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5002/bk/admin/dashboard/sell')
+        const response = await axios.get(bkURL + '/admin/dashboard/sell')
         const lastMM = response.data.lastMM
         const nowMM = response.data.nowMM
         const labels = lastMM.map((item) => {

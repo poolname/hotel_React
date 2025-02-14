@@ -45,6 +45,8 @@ const options = {
   },
 };
 
+const bkURL = process.env.REACT_APP_BACK_URL;
+
 const AdminCont4Chart = () => {
   const [chartData, setChartData] = useState({
       labels: [],
@@ -54,7 +56,7 @@ const AdminCont4Chart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5002/bk/admin/dashboard/cancel')
+        const response = await axios.get(bkURL + '/admin/dashboard/cancel')
         const lastCancel = response.data.lastCancel
         const nowCancel = response.data.nowCancel
         const labels = lastCancel.map((item) => {

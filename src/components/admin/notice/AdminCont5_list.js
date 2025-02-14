@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Pagination from "../../sub/Pagination";
 
+const bkURL = process.env.REACT_APP_BACK_URL;
+
 const AdminCont5_list = ({ Noticelists, setNoticelists }) => {
     const navigate = useNavigate();
 
@@ -27,7 +29,7 @@ const AdminCont5_list = ({ Noticelists, setNoticelists }) => {
         console.log("파일이름", targetNotice.system_name);
         try {
             const res = await axios.delete(
-                `http://localhost:5002/bk/notice/delete/${id}`,
+                `${bkURL}/notice/delete/${id}`,
                 {
                     data: { delUPfile: targetNotice.system_name },
                     headers: {

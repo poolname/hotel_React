@@ -8,6 +8,8 @@ import OfferMain2_date from "./OfferMain2_date";
 import OfferMain2_kewords from "./OfferMain2_keword";
 import OfferMain2_btn from "./OfferMain2_btn";
 
+const bkURL = process.env.REACT_APP_BACK_URL;
+
 const OfferMain2 = ({ setOfferlists }) => {
     const [range, setRange] = useState([{ startDate: null, endDate: null }]);
     const [offertype, setoffertype] = useState("");
@@ -41,7 +43,7 @@ const OfferMain2 = ({ setOfferlists }) => {
         try {
             console.log("폼데이터", myData);
             const res = await axios.put(
-                "http://localhost:5002/bk/specialOffer",
+                bkURL + "/specialOffer",
                 myData
             );
             console.log("필터데이터", res.data);
