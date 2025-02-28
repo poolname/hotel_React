@@ -18,13 +18,15 @@ const PaymentSuccess = () => {
   const [method, setMethod] = useState(null);
   const [provider, setProvider] = useState(null);
 
+  const bkURL = process.env.REACT_APP_BACK_URL;
+
   // 결제 승인 및 metadata 가져오기
   useEffect(() => {
     window.scrollTo(0, 0);
     const fetchPaymentDetails = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:5002/api/payment/confirm",
+          `${bkURL}/api/payment/confirm`,
           {
             paymentKey,
             orderId,

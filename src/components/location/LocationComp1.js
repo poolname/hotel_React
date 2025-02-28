@@ -39,6 +39,7 @@ const LocationComp1 = () => {
                     const kakaoMapUrl = `https://map.kakao.com/link/map/${encodeURIComponent(
                         "신라호텔"
                     )},${markerPosition.getLat()},${markerPosition.getLng()}`;
+                    console.log("marker 확인 콘솔");
                     window.open(kakaoMapUrl, "_blank");
                 });
 
