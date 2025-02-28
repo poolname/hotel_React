@@ -14,7 +14,7 @@ const OfferMain = () => {
     const fetchData = async () => {
         try {
             const res = await axios.get(
-                bkURL + "/specialOffer"
+//                bkURL + "/specialOffer"
                 `${bkURL}/bk/specialOffer`
             );
             // console.log("갔다옴 : ", res.data);
