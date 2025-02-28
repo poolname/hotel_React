@@ -128,8 +128,7 @@ const OfferDetail1_pkgcon = ({ img }) => {
         },
     ];
 
-    const imgurl = `${bkURl}/files/${img}`;
-    // const imgurl = `http://192.168.123.100:5002/bk/files/${img}`;
+    const imgurl = `${bkURL}/files/${img}`;
     return (
         <div>
             {/* <!-- 패키지내용 --> */}
