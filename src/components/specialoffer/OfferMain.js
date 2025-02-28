@@ -14,14 +14,8 @@ const OfferMain = () => {
     const fetchData = async () => {
         try {
             const res = await axios.get(
-//                bkURL + "/specialOffer"
                 `${bkURL}/specialOffer`
-//                `${bkURL}/bk/specialOffer`
-                
-//                bkURL + "/specialOffer",
-                
             );
-            // console.log("갔다옴 : ", res.data);
             setOfferlists(res.data);
             setrOfferlists(res.data); // 추천상품을위한 리스트
         } catch (err) {
@@ -29,7 +23,6 @@ const OfferMain = () => {
         }
     };
     useEffect(() => {
-        //console.log("오퍼메인");
         // 스페셜오퍼 리스트 데이터
         document.title = "신라호텔 - 스페셜오퍼";
         fetchData();
