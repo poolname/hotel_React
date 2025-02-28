@@ -156,11 +156,6 @@ const LoginComp = () => {
                                 <Link to="/join">회원가입</Link>
                                 <Link to="/findid">ID/PW찾기</Link>
                             </div>
-
-                            {/* <p id="naverIdLogin">네이버로그인</p> */}
-                            <p onClick={naverLoginBtn}>네이버로그인</p>
-                            <p>구글로그인</p>
-                            <p>페이스북로그인</p>
                         </div>
                     </form>
                 </div>
