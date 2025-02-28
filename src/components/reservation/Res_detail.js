@@ -88,7 +88,8 @@ function Res_detail(props) {
     const fetchUpSystem = async () => {
       try {
         const response = await axios.post(
-          bkURL + "/reserve/detail",
+          `${bkURL}/reserve/detail`,
+//          bkURL + "/reserve/detail",
           {
             productId, // location.state에서 productId를 전달받는다고 가정
           }
