@@ -73,7 +73,7 @@ const BoardJoin = () => {
                         <Editor
                             name="context"
                             id="content"
-                            apiKey="aqn3pn6elseepzwxjuftifz4jhqdky0u8xlzc4sv2kl4pe8l"
+                            apiKey="dj5a76kbwy48velu51fmmvjhogkcdfrrz2qol1lo4720hyi2"
                             onInit={(_evt, editor) => (editorRef.current = editor)} // 현재값 current에 저장
                             initialValue=""
                             init={{
