@@ -15,7 +15,11 @@ const OfferMain = () => {
         try {
             const res = await axios.get(
 //                bkURL + "/specialOffer"
-                `${bkURL}/bk/specialOffer`
+                `${bkURL}/specialOffer`
+//                `${bkURL}/bk/specialOffer`
+                
+//                bkURL + "/specialOffer",
+                
             );
             // console.log("갔다옴 : ", res.data);
             setOfferlists(res.data);
