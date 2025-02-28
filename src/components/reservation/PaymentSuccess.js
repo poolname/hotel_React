@@ -127,8 +127,6 @@ const PaymentSuccess = () => {
       .slice(0, 19)
       .replace("T", " ");
     const payment_key = paymentKey;
-    console.log("결제 키:", payment_key);
-    console.log("결제 방법:", metadata.paymentMethod);
 
     const paymentData = {
       paymentId: paymentId,
@@ -141,8 +139,6 @@ const PaymentSuccess = () => {
       refundDate: null,
       refundAmount: null,
     };
-
-    console.log(paymentData);
 
     try {
       const paymentResponse = await axios.post(
