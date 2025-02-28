@@ -233,16 +233,14 @@ const MyReservationCont = () => {
         title: `${(res.offer_name || res.room_type || "").trim()} [${res.room_id || "N/A"}호]`, // 이벤트 제목: 패키지명 또는 객실 타입
         start: new Date(res.start_date).toISOString(), // 시작일: ISO 형식으로 변환
         end: res.end_date
-          ? new Date(new Date(res.end_date).setDate(new Date(res.end_date).getDate() + 1))
-              .toISOString() // 종료일: ISO 형식으로 변환 후 하루 추가
+          ? new Date(res.end_date).toISOString() // 종료일: 추가 없이 그대로 사용
           : new Date(res.start_date).toISOString(), // 종료일이 없는 경우 시작일로 대체
       })),
       ...pastReservations.map((res) => ({
         title: `${(res.offer_name || res.room_type || "").trim()} [${res.room_id || "N/A"}호]`, // 지난 예약임을 표시
         start: new Date(res.start_date).toISOString(), // 시작일: ISO 형식으로 변환
         end: res.end_date
-          ? new Date(new Date(res.end_date).setDate(new Date(res.end_date).getDate() + 1))
-              .toISOString() // 종료일: ISO 형식으로 변환 후 하루 추가
+          ? new Date(res.end_date).toISOString() // 종료일: 추가 없이 그대로 사용
           : new Date(res.start_date).toISOString(), // 종료일이 없는 경우 시작일로 대체
       })),
     ]}
