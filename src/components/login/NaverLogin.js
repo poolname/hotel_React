@@ -6,7 +6,7 @@ const bkURL = process.env.REACT_APP_BACK_URL;
 const NAVER_CLIENT_ID = process.env.REACT_APP_NAVER_CLIENT_ID;
 
 const NaverLogin = () => {
-    const NAVER_CLIENT_ID = process.env.VQ2MBy9qmWgG6U7_jSOI; // 발급받은 클라이언트 아이디
+    const NAVER_CLIENT_ID = process.env.REACT_APP_NAVER_CLIENT_ID; // 발급받은 클라이언트 아이디
     const REDIRECT_URI = "https://web-hotel-react-m6szyrxq03f42d77.sel4.cloudtype.app/oauth"; // Callback URL
     const STATE = "false";
     const NAVER_AUTH_URL = `https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=${NAVER_CLIENT_ID}&state=${STATE}&redirect_uri=${REDIRECT_URI}`;
