@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const bkURL = process.env.REACT_APP_BACK_URL;
-const NAVER_CLIENT_ID = process.env.REACT_APP_NAVER_CLIENT_ID;
+// const NAVER_CLIENT_ID = process.env.REACT_APP_NAVER_CLIENT_ID;
 
 const NaverLogin = () => {
     const NAVER_CLIENT_ID = process.env.REACT_APP_NAVER_CLIENT_ID; // 발급받은 클라이언트 아이디
