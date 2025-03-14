@@ -16,14 +16,14 @@ import '../../scss/main.scss'
 
 const MainHeader = () => {
     const gnbTitle = [
-        {
-            link : '/specialOffer', 
-            title : '스페셜 오퍼',
-            gnbMenu : [
-                {link : '/specialOffer', text : '객실패키지'},
-                {link : '/event', text : '이벤트'},
-            ]
-        },
+        // {
+        //     link : '/specialOffer', 
+        //     title : '스페셜 오퍼',
+        //     gnbMenu : [
+        //         {link : '/specialOffer', text : '객실패키지'},
+        //         {link : '/event', text : '이벤트'},
+        //     ]
+        // },
         {
             link : '/room', 
             title : '객실',
