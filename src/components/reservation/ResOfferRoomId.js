@@ -303,8 +303,8 @@ function ResOfferRoomId(props) {
             </div>
 
             {/* 선택된 탭에 따라 콘텐츠 표시 */}
-            <div className="tab-cont-wrap">
-              <div className="tab-cont package on">
+            // <div className="tab-cont-wrap">
+            //   <div className="tab-cont package on">
                 // {availablePackages.map((pkg) => (
                 //   <PackageRoomItem
                 //     key={pkg.offer_id}
