@@ -126,7 +126,7 @@ function PackageRoomItem({ packageData, checkInDate, checkOutDate, adultCount, c
   
   return (
     <>
-    <ul className="tab-cont package on">
+    <ul className="tab-cont package"> // class package 옆에 on 제거한 상태
       <li>
           <div className="box-wrap">
               <div className="l-box">
