@@ -302,21 +302,21 @@ function ResOfferRoomId(props) {
               </div>
             </div>
 
-            {/* 선택된 탭에 따라 콘텐츠 표시 
+            {/* 선택된 탭에 따라 콘텐츠 표시 */}
             <div className="tab-cont-wrap">
                <div className="tab-cont package on">
-                // {availablePackages.map((pkg) => (
-                //   <PackageRoomItem
-                //     key={pkg.offer_id}
-                //     packageData={pkg}
-                //     checkInDate={checkInDate}
-                //     checkOutDate={checkOutDate}
-                //     adultCount={confirmedAdultCount}
-                //     childrenCount={confirmedChildrenCount}
-                //   />
-                // ))}
+                 {availablePackages.map((pkg) => (
+                   <PackageRoomItem
+                     key={pkg.offer_id}
+                     packageData={pkg}
+                     checkInDate={checkInDate}
+                     checkOutDate={checkOutDate}
+                     adultCount={confirmedAdultCount}
+                     childrenCount={confirmedChildrenCount}
+                   />
+                 ))}
               </div>
-            </div> */}
+            </div> 
           </div>
         </div>
       </section>
